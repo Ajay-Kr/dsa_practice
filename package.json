@@ -1,0 +1,8 @@
+{
+  "name": "dsa_practice",
+  "version": "1.0.0",
+  "description": "A collection of DSA problems and solutions in TS",
+  "scripts": {
+    "run": "bun run"
+  }
+}

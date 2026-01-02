@@ -76,3 +76,5 @@ output.txt
 
 # User-specific configuration files
 *.local
+bun.lockb
+.bun/

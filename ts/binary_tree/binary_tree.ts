@@ -49,4 +49,46 @@ function initializeTree () {
         )
     );
     console.log({rootNode});
+    return rootNode;
 }
+
+/**
+ * 
+ * @param root 
+ * @returns 
+ * === Binary Tree Structure ===
+ *
+ *  └── 15
+ *       ├── 35
+ *       │   ├── 3
+ *       │   │   ├── 1
+ *       │   │   └── 10
+ *       │   └── 6
+ *       └── 40
+ *           ├── 5
+ *           │   ├── 8
+ *           │   └── 41
+ *           └── 7
+ */
+function printTree(root: TreeNode | null, prefix = "", isLeft=false): void {
+    if(root === null) return;
+
+    const data = root.data;
+    const left = root.left;
+    const right = root.right;
+    
+    const prtStr = prefix + (isLeft ? '├── ' : '└── ') + data;
+    console.log(prtStr);
+
+    if(left) {
+        printTree(left, prefix+"    ", true);
+    }
+    if(right) {
+        printTree(right, prefix+"    ", false);
+    }
+}
+
+const tree = initializeTree();
+console.log(tree);
+console.log("=== Binary Tree Structure ===\n");
+printTree(tree, );
