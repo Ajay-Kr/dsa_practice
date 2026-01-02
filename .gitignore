@@ -26,7 +26,7 @@ target/*.log
 *.iws
 
 # VS Code
-.vscode/
+# .vscode/
 # Keep tasks.json and settings.json if you want to share them
 # If you want to share tasks.json and settings.json, comment out the line below
 #.vscode/

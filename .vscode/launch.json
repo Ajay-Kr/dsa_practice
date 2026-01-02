@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Run Solution",
+      "request": "launch",
+      "mainClass": "Solution",
+      "cwd": "${fileDirname}",
+      "classPaths": [
+        "${fileDirname}"
+      ],
+      "args": [],
+      "console": "integratedTerminal"
+    }
+  ]
+}
