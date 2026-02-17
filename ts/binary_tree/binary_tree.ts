@@ -91,4 +91,4 @@ function printTree(root: TreeNode | null, prefix = "", isLeft=false): void {
 const tree = initializeTree();
 console.log(tree);
 console.log("=== Binary Tree Structure ===\n");
-printTree(tree, );
+printTree(tree);

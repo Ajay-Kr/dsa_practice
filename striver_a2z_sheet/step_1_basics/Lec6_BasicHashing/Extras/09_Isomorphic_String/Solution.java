@@ -23,20 +23,32 @@ public class Solution {
     // 3. Hash 
     //    - hash the first apearance of each char
     //    - if same character repeats than should be same as previous
-    int[] hash = new int[26];
+    int[] hashStr1 = new int[27];
+    int[] hashStr2 = new int[27];
     for(int i = 0; i < str1.length(); i++) {
-      int indexChar1 = str1.charAt(i) - 'a';
-      int indexChar2 = str2.charAt(i) - 'a';
+      int indexStr1 = str1.charAt(i) - 'a' + 1;
+      int indexStr2 = str2.charAt(i) - 'a' + 1;
 
-      if(hash[indexChar1] > 0) {
-        if(indexChar2 != hash[indexChar1]) {
-          System.out.println("Not isomorphic");
-          return;
-        }
-        continue;
+      if(hashStr1[indexStr1] == 0 && hashStr2[indexStr2] == 0) {
+        hashStr1[indexStr1] = indexStr2;
+        hashStr2[indexStr2] = indexStr1;
+      } else if(hashStr1[indexStr1] != indexStr2 || hashStr2[indexStr2] != indexStr1) {
+        System.out.println("Not Isomorphic");
+        return;
       }
-      hash[indexChar1] = indexChar2;
+      // if(hashStr1[indexStr1] > 0 && hashStr1[indexStr1] != indexStr2 ) {
+      //   System.out.println("Not Isomorphic");
+      //   return;
+      // }
+      // if(hashStr2[indexStr2] > 0 && hashStr2[indexStr2] != indexStr1 ){
+      //   System.out.println("Not Isomorphic");
+      //   return;
+      // } 
+      
+      // hashStr1[indexStr1] = indexStr2;
+      // hashStr2[indexStr2] = indexStr1;
     }
+    
 
     System.out.println("Isomorphic");
 
